@@ -14,11 +14,22 @@ export function createAuth() {
 
       schema: schema,
     }),
+    // 允许的来源
     trustedOrigins: [
       env.CORS_ORIGIN,
+      "cashory://",
+      "cashory.exp.direct://",
+      "mybettertapp://",
       "react-native-project://",
       ...(env.NODE_ENV === "development"
-        ? ["exp://", "exp://**", "exp://192.168.*.*:*/**", "http://localhost:8081"]
+        ? [
+            "exp://",
+            "exp://**",
+            "exp://192.168.*.*:*/**",
+            "http://localhost:8081",
+            "http://localhost:*",
+            "http://192.168.*:*",
+          ]
         : []),
     ],
     emailAndPassword: {

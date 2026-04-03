@@ -19,6 +19,8 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
     "dev:server": "turbo -F server dev",
@@ -28,8 +30,12 @@
     "db:migrate": "turbo -F @react-native-project/db db:migrate"
   },
   "dependencies": {
+    "@eslint/js": "^10.0.1",
     "@react-native-project/env": "workspace:*",
     "dotenv": "catalog:",
+    "eslint": "^10.1.0",
+    "eslint-config-expo": "^55.0.0",
+    "typescript-eslint": "^8.58.0",
     "zod": "catalog:"
   },
   "devDependencies": {
