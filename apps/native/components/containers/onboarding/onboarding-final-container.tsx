@@ -137,6 +137,25 @@ const OnboardingFinalContainer: FC<OnboardingFinalContainerProps> = ({
                 onPress={() => handleSocialPress(socialProvider.provider)}
               />
             ))}
+
+            <View className="mt-2 flex-row items-center">
+              <View className="h-px flex-1 bg-separator" />
+              <Text
+                className="px-4 text-body-sm leading-3.75 text-muted"
+                style={{
+                  fontFamily: ONBOARDING_FONT_FAMILY.regular,
+                }}
+              >
+                Or Register with
+              </Text>
+              <View className="h-px flex-1 bg-separator" />
+            </View>
+
+            <AuthRow
+              label="通过邮箱注册"
+              onPress={() => router.push("/(auth)/sign-up")}
+              icon={<Ionicons name="mail" size={28} color={textColor} />}
+            />
           </View>
         </ScrollView>
       </View>
