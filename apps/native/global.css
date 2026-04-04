@@ -3,13 +3,9 @@
 
 @import "heroui-native/styles";
 
-/* Path to the heroui-native lib inside node_modules relative to global.css */
-/* Examples:
- *   - If global.css is at project root: ./node_modules/heroui-native/lib
- *   - If global.css is in app/: ../node_modules/heroui-native/lib
- *   - If global.css is in src/styles/: ../../node_modules/heroui-native/lib
- */
-@source '../../node_modules/heroui-native/lib';
+/* HeroUI Native：@source 必须解析到 heroui-native/lib，Uniwind 才会扫描组件里的 className。
+ * 与官方 Quick Start 一致：global.css 放在 Expo 应用根目录时用 ./node_modules（不要用 ../../ 指到仓库根却未装包）。 */
+@source "../../node_modules/heroui-native/lib";
 
 /* =============================================================================
    CASHORY DESIGN SYSTEM — HeroUI Native Theme
@@ -90,10 +86,10 @@
 
   /* ── Font Family — Plus Jakarta Sans ────────────────────────────────────── */
   /* PostScript names must match the keys used in useFonts() in _layout.tsx   */
-  --font-normal: "PlusJakartaSans_400Regular";
-  --font-medium: "PlusJakartaSans_500Medium";
-  --font-semibold: "PlusJakartaSans_600SemiBold";
-  --font-bold: "PlusJakartaSans_700Bold";
+  --font-family-normal: "PlusJakartaSans_400Regular";
+  --font-family-medium: "PlusJakartaSans_500Medium";
+  --font-family-semibold: "PlusJakartaSans_600SemiBold";
+  --font-family-bold: "PlusJakartaSans_700Bold";
 
   /* ── Typography Scale — Cashory Design Guidelines ────────────────────────
      Naming: --text-{token}           → font size (rem)
@@ -327,4 +323,9 @@
   /* ── Extra Custom Cashory Primitives ─────────────────────────────────────── */
   --color-dark-green: var(--dark-green);
   --color-dark-charcoal-green: var(--dark-charcoal-green);
+
+  --font-sans: var(--font-family-normal);
+  --font-medium: var(--font-family-medium);
+  --font-semibold: var(--font-family-semibold);
+  --font-bold: var(--font-family-bold);
 }

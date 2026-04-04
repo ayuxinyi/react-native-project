@@ -1,9 +1,6 @@
-import { View, Text } from "react-native";
+import SignUpTemplate from "@/components/templates/auth/sign-up-template";
+
 const SignUp = () => {
-  return (
-    <View>
-      <Text>SignUp</Text>
-    </View>
-  );
+  return <SignUpTemplate />;
 };
 export default SignUp;

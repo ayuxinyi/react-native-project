@@ -14,7 +14,7 @@ const Index = () => {
     if (!isLoading && session?.data?.user) {
       // router.replace()
       const user = session.data.user;
-      // TODO: 处理用户信息
+      // router.replace("/(auth)/sign-in");
     }
   }, [isLoading, session, router]);
 

@@ -5,6 +5,9 @@ import { env } from "@react-native-project/env/server";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 
+// 开发环境允许所有来源，生产环境只允许指定的来源
+const devOrigins = env.NODE_ENV === "development" ? ["*"] : [];
+
 export function createAuth() {
   const db = createDb();
 
@@ -21,16 +24,7 @@ export function createAuth() {
       "cashory.exp.direct://",
       "mybettertapp://",
       "react-native-project://",
-      ...(env.NODE_ENV === "development"
-        ? [
-            "exp://",
-            "exp://**",
-            "exp://192.168.*.*:*/**",
-            "http://localhost:8081",
-            "http://localhost:*",
-            "http://192.168.*:*",
-          ]
-        : []),
+      ...devOrigins,
     ],
     emailAndPassword: {
       enabled: true,

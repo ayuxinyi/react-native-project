@@ -1,4 +1,4 @@
-import "@/global.css";
+import "../global.css";
 import { SplashScreen, Stack } from "expo-router";
 import { HeroUINativeProvider } from "heroui-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
@@ -13,7 +13,7 @@ import {
 } from "@expo-google-fonts/plus-jakarta-sans";
 import { AppThemeProvider } from "@/contexts/app-theme-context";
 import React, { useEffect } from "react";
-import { ReactQueryProvider } from "@/context/react-query-provider";
+import { ReactQueryProvider } from "@/contexts/react-query-provider";
 
 export const unstable_settings = {
   initialRouteName: "(drawer)",
@@ -27,6 +27,8 @@ function StackLayout() {
         name="index"
         options={{ headerShown: false, orientation: "portrait" }}
       />
+      <Stack.Screen name="(auth)/sign-up" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)/sign-in" options={{ headerShown: false }} />
       <Stack.Screen
         name="modal"
         options={{ title: "Modal", presentation: "modal" }}

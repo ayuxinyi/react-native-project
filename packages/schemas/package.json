@@ -1,0 +1,20 @@
+{
+  "name": "@react-native-project/schema",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@react-native-project/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
