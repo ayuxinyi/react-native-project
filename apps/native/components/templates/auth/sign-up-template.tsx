@@ -2,13 +2,12 @@ import useAuthTheme from "@/hooks/use-auth-theme";
 import { ONBOARDING_FONT_FAMILY } from "@/lib/constants/onboarding-typography";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   Text,
   Platform,
   ScrollView,
   View,
-  useWindowDimensions,
   Pressable,
   TextInput,
 } from "react-native";
@@ -24,11 +23,12 @@ import AuthPrimaryButton from "@/components/base/auth/auth-primary-button";
 import AuthSeparator from "@/components/base/auth/auth-separator";
 import AuthSocialButtons from "@/components/base/auth/auth-social-buttons";
 import AuthFooterLink from "@/components/base/auth/auth-footer-link";
+import { useLayout } from "@/hooks/use-layout";
+import BackButton from "@/components/ui/back-button";
 
 const SignUpTemplate = () => {
   const { colors } = useAuthTheme();
   const insets = useSafeAreaInsets();
-  const { width } = useWindowDimensions();
   const router = useRouter();
   const { toast } = useToast();
 
@@ -37,8 +37,7 @@ const SignUpTemplate = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
 
-  const contentWidth = useMemo(() => Math.min(346, width - 48), [width]);
-  const ctaWidth = useMemo(() => Math.min(345, width - 48), [width]);
+  const { contentWidth, ctaWidth } = useLayout();
 
   const {
     control,
@@ -101,18 +100,11 @@ const SignUpTemplate = () => {
         }}
       >
         <View style={{ width: contentWidth }}>
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel="返回登录"
+          <BackButton
             onPress={() => router.back()}
-            className="size-14 rounded-full items-center justify-center"
-            style={({ pressed }) => ({
-              backgroundColor: colors.socialBackground,
-              opacity: pressed ? 0.8 : 1,
-            })}
-          >
-            <Ionicons name="arrow-back" size={28} color={colors.icon} />
-          </Pressable>
+            color={colors.socialBackground}
+            accessibilityLabel="返回登录"
+          />
           <View className="mt-5.5 gap-2.5">
             <Text
               className="text-h2 leading-8.75"

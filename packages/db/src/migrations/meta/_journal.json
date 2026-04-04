@@ -8,6 +8,13 @@
       "when": 1775177137481,
       "tag": "0000_pale_millenium_guard",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1775282024409,
+      "tag": "0001_brainy_lilith",
+      "breakpoints": true
     }
   ]
 }

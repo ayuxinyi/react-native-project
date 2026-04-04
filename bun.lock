@@ -42,7 +42,7 @@
         "better-auth": "catalog:",
         "date-fns": "^4.1.0",
         "dotenv": "catalog:",
-        "expo": "^55.0.0",
+        "expo": "^55.0.11",
         "expo-blur": "^55.0.10",
         "expo-constants": "~55.0.7",
         "expo-font": "^55.0.4",
@@ -57,7 +57,7 @@
         "expo-sharing": "^55.0.14",
         "expo-status-bar": "^55.0.4",
         "expo-web-browser": "~55.0.9",
-        "heroui-native": "^1.0.0-rc.3",
+        "heroui-native": "^1.0.1",
         "hono": "^4.12.9",
         "react": "19.2.0",
         "react-dom": "19.2.0",
@@ -74,7 +74,8 @@
         "tailwind-merge": "^3.4.0",
         "tailwind-variants": "^3.2.2",
         "tailwindcss": "^4.1.18",
-        "uniwind": "^1.4.0",
+        "uniwind": "^1.6.1",
+        "world-countries": "^5.1.0",
         "zod": "catalog:",
       },
       "devDependencies": {
@@ -2132,6 +2133,8 @@
     "which-typed-array": ["which-typed-array@1.1.20", "https://registry.yarnpkg.com/which-typed-array/-/which-typed-array-1.1.20.tgz", { "dependencies": { "available-typed-arrays": "^1.0.7", "call-bind": "^1.0.8", "call-bound": "^1.0.4", "for-each": "^0.3.5", "get-proto": "^1.0.1", "gopd": "^1.2.0", "has-tostringtag": "^1.0.2" } }, "sha512-LYfpUkmqwl0h9A2HL09Mms427Q1RZWuOHsukfVcKRq9q95iQxdw0ix1JQrqbcDR9PH1QDwf5Qo8OZb5lksZ8Xg=="],
 
     "word-wrap": ["word-wrap@1.2.5", "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.5.tgz", {}, "sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA=="],
+
+    "world-countries": ["world-countries@5.1.0", "https://registry.yarnpkg.com/world-countries/-/world-countries-5.1.0.tgz", {}, "sha512-CXR6EBvTbArDlDDIWU3gfKb7Qk0ck2WNZ234b/A0vuecPzIfzzxH+O6Ejnvg1sT8XuiZjVlzOH0h08ZtaO7g0w=="],
 
     "wrap-ansi": ["wrap-ansi@7.0.0", "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz", { "dependencies": { "ansi-styles": "^4.0.0", "string-width": "^4.1.0", "strip-ansi": "^6.0.0" } }, "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q=="],
 

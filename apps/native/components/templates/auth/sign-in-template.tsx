@@ -2,16 +2,18 @@ import AuthFooterLink from "@/components/base/auth/auth-footer-link";
 import AuthPrimaryButton from "@/components/base/auth/auth-primary-button";
 import AuthSeparator from "@/components/base/auth/auth-separator";
 import AuthSocialButtons from "@/components/base/auth/auth-social-buttons";
+import BackButton from "@/components/ui/back-button";
 import { SafeAreaView } from "@/components/ui/safe-ares";
 import { SignInValues, useAuthSignIn } from "@/hooks/use-auth-session";
 import useAuthTheme from "@/hooks/use-auth-theme";
+import { useLayout } from "@/hooks/use-layout";
 import { Ionicons } from "@expo/vector-icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInSchema } from "@react-native-project/schema";
 import { to } from "await-to-js";
 import { useRouter } from "expo-router";
 import { FieldError, TextField, useToast } from "heroui-native";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import {
   KeyboardAvoidingView,
@@ -20,7 +22,6 @@ import {
   ScrollView,
   Text,
   TextInput,
-  useWindowDimensions,
   View,
 } from "react-native";
 
@@ -29,9 +30,7 @@ const SignInTemplate = () => {
   const router = useRouter();
   const { colors } = useAuthTheme();
 
-  const { width } = useWindowDimensions();
-  const contentWith = useMemo(() => Math.min(346, width - 48), [width]);
-  const ctaWidth = useMemo(() => Math.min(345, width - 48), [width]);
+  const { contentWidth, ctaWidth } = useLayout();
 
   const [authError, setAuthError] = useState<string | null>(null);
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -92,15 +91,12 @@ const SignInTemplate = () => {
             paddingHorizontal: 24,
           }}
         >
-          <View style={{ width: contentWith }}>
-            <Pressable
+          <View style={{ width: contentWidth }}>
+            <BackButton
               onPress={() => router.back()}
-              accessibilityRole="button"
+              color={colors.socialBackground}
               accessibilityLabel="返回首页"
-              className="size-14 items-center justify-center rounded-full bg-surface-secondary"
-            >
-              <Ionicons name="arrow-back" size={24} color="white" />
-            </Pressable>
+            />
 
             <View className="mt-5.5 gap-2.5">
               <Text className="text-h2 leading-8.75 font-bold text-foreground">
@@ -112,7 +108,7 @@ const SignInTemplate = () => {
             </View>
           </View>
 
-          <View className="mt-8.5 gap-3.5" style={{ width: contentWith }}>
+          <View className="mt-8.5 gap-3.5" style={{ width: contentWidth }}>
             <Controller
               control={control}
               name="email"
@@ -161,7 +157,7 @@ const SignInTemplate = () => {
                 <TextField isInvalid={!!errors.password}>
                   <View
                     className="flex relative items-center"
-                    style={{ width: contentWith }}
+                    style={{ width: contentWidth }}
                   >
                     <TextInput
                       ref={passwordInputRef}

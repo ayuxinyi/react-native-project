@@ -17,6 +17,30 @@ export function createAuth() {
 
       schema: schema,
     }),
+    user: {
+      additionalFields: {
+        onboardingCompleted: {
+          type: "boolean",
+          required: false,
+          input: true,
+        },
+        country: {
+          type: "string",
+          required: false,
+          input: true,
+        },
+        phone: {
+          type: "string",
+          required: false,
+          input: true,
+        },
+        currency: {
+          type: "string",
+          required: false,
+          input: true,
+        },
+      },
+    },
     // 允许的来源
     trustedOrigins: [
       env.CORS_ORIGIN,
