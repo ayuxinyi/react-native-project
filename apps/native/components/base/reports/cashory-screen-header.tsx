@@ -1,7 +1,7 @@
 import { cn, useThemeColor } from "heroui-native";
 import { FC, ReactNode } from "react";
 import { View, Text, Pressable } from "react-native";
-import { StyledGeneralOption } from "../icon/GeneralOption";
+import { StyledGeneralOption } from "../../ui/icon/GeneralOption";
 import { useRouter } from "expo-router";
 
 interface CashoryScreenHeaderProps {

@@ -3,7 +3,7 @@ import React from "react";
 import CashoryReportSummaryCard from "@/components/base/reports/cashory-report-summary-card";
 import PeriodBadge from "@/components/base/reports/period-badge";
 import CashoryReportBarChart from "@/components/base/reports/cashory-report-bar-chart";
-import CashorySectionHeader from "@/components/ui/common/cashory-section-header";
+import CashorySectionHeader from "@/components/base/reports/cashory-section-header";
 import CashoryTransactionCard from "@/components/base/reports/cashory-transaction-card";
 
 const EXPENSE_CHART_DATA = [

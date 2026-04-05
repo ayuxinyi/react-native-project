@@ -1,9 +1,5 @@
-import { View, Text } from "react-native";
+import ProfileTemplate from "@/components/templates/profile-template";
 const Profile = () => {
-  return (
-    <View>
-      <Text>Profile</Text>
-    </View>
-  );
+  return <ProfileTemplate />;
 };
 export default Profile;

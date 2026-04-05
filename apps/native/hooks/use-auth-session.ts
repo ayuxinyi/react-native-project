@@ -118,3 +118,23 @@ export const useCompleteOnboarding = () => {
     },
   });
 };
+
+export const useAuthSignOut = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: async () => {
+      const result = await authClient.signOut();
+      if (result.error) {
+        throw new Error(result.error.message || "账号退出登录，请稍后重试");
+      }
+      return result.data;
+    },
+    async onSuccess() {
+      await queryClient.invalidateQueries({
+        queryKey: queryKeys.auth.all,
+      });
+      // 清除所有缓存
+      await queryClient.clear();
+    },
+  });
+};

@@ -32,6 +32,8 @@ function StackLayout() {
       <Stack.Screen name="onboarding" options={{ headerShown: false }} />
       <Stack.Screen name="invoices" options={{ headerShown: false }} />
       <Stack.Screen name="notifications" options={{ headerShown: false }} />
+      <Stack.Screen name="category" options={{ headerShown: false }} />
+      <Stack.Screen name="wallet" options={{ headerShown: false }} />
       <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
       <Stack.Screen
         name="modal"

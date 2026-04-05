@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Pressable } from "react-native";
-import CashoryScreenHeader from "../ui/common/cashory-screen-header";
+import CashoryScreenHeader from "../base/reports/cashory-screen-header";
 import { useCallback, useState } from "react";
 import { StyledGeneralOption } from "../ui/icon/GeneralOption";
 import { cn, useThemeColor } from "heroui-native";

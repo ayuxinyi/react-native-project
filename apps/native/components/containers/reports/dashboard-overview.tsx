@@ -1,4 +1,4 @@
-import CashorySectionHeader from "@/components/ui/common/cashory-section-header";
+import CashorySectionHeader from "@/components/base/reports/cashory-section-header";
 import { View, Text } from "react-native";
 import CashoryIncomeExpense from "../home/cashory-income-expense";
 import CashoryReportBalanceChart from "@/components/base/reports/cashory-report-balance-chart";

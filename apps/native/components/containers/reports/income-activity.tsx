@@ -2,7 +2,7 @@ import CashoryReportBarChart from "@/components/base/reports/cashory-report-bar-
 import CashoryReportSummaryCard from "@/components/base/reports/cashory-report-summary-card";
 import CashoryTransactionCard from "@/components/base/reports/cashory-transaction-card";
 import PeriodBadge from "@/components/base/reports/period-badge";
-import CashorySectionHeader from "@/components/ui/common/cashory-section-header";
+import CashorySectionHeader from "@/components/base/reports/cashory-section-header";
 import { Text, View } from "react-native";
 
 const INCOME_CHART_DATA = [
