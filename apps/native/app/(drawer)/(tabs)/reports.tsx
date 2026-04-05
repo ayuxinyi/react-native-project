@@ -1,9 +1,5 @@
-import { View, Text } from "react-native";
+import ReportsTemplate from "@/components/templates/reports-template";
 const Reports = () => {
-  return (
-    <View>
-      <Text>Reports</Text>
-    </View>
-  );
+  return <ReportsTemplate />;
 };
 export default Reports;
