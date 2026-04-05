@@ -1,7 +1,7 @@
 import { useThemeColor } from "heroui-native";
 import { View, Text, ActivityIndicator } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { Logo } from "../../ui/logo";
+import { Logo } from "../../ui/common/logo";
 import { ONBOARDING_TEXT_STYLE } from "@/lib/constants/onboarding-typography";
 
 const OnboardingSplashContainer = ({ message }: { message: string }) => {

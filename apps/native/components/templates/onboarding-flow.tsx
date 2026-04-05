@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import SelectCountry from "../base/onboarding/select-country";
 import ProfileSetup from "../base/onboarding/profile-setup";
-import { SafeAreaView } from "../ui/safe-ares";
+import { SafeAreaView } from "../ui/common/safe-ares";
 import {
   useCompleteOnboarding,
   useUpdateProfile,

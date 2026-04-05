@@ -24,7 +24,7 @@ import AuthSeparator from "@/components/base/auth/auth-separator";
 import AuthSocialButtons from "@/components/base/auth/auth-social-buttons";
 import AuthFooterLink from "@/components/base/auth/auth-footer-link";
 import { useLayout } from "@/hooks/use-layout";
-import BackButton from "@/components/ui/back-button";
+import BackButton from "@/components/ui/common/back-button";
 
 const SignUpTemplate = () => {
   const { colors } = useAuthTheme();

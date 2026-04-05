@@ -1,5 +1,5 @@
 import { Country } from "@/components/templates/onboarding-flow";
-import BackButton from "@/components/ui/back-button";
+import BackButton from "@/components/ui/common/back-button";
 import useAuthTheme from "@/hooks/use-auth-theme";
 import { useLayout } from "@/hooks/use-layout";
 import { COUNTRIES } from "@/lib/constants/countries";
