@@ -1,7 +1,7 @@
 import { auth } from "@react-native-project/auth";
 import { createMiddleware } from "hono/factory";
 
-type AuthEnv = {
+export type AuthEnv = {
   Variables: {
     userId: string;
     userEmail: string;

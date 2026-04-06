@@ -1,0 +1,14 @@
+{
+  "name": "@react-native-project/api-types",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.ts"
+    }
+  },
+  "devDependencies": {
+    "server": "workspace:*"
+  }
+}

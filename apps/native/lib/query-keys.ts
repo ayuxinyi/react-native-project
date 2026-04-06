@@ -22,4 +22,12 @@ export const queryKeys = {
     profile: () => ["user", "profile"] as const,
     onboarding: () => ["user", "onboarding"] as const,
   },
+  /**
+   * 分类查询键
+   * @description 用于查询分类相关的键值对
+   */
+  category: {
+    all: ["category"] as const,
+    list: (type?: "income" | "expense") => ["category", "list", type] as const,
+  },
 };

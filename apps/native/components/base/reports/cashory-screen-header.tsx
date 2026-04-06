@@ -1,8 +1,8 @@
 import { cn, useThemeColor } from "heroui-native";
 import { FC, ReactNode } from "react";
 import { View, Text, Pressable } from "react-native";
-import { StyledGeneralOption } from "../../ui/icon/GeneralOption";
 import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 
 interface CashoryScreenHeaderProps {
   title: string;
@@ -33,10 +33,10 @@ const CashoryScreenHeader: FC<CashoryScreenHeaderProps> = ({
         {showBack && (
           <Pressable
             hitSlop={8}
-            className="size-12.5 rounded-[40px] items-center bg-brand-flashwhite dark:bg-brand-green-800"
+            className="size-12.5 rounded-[40px] items-center bg-brand-flashwhite dark:bg-brand-green-800 justify-center flex"
             onPress={() => (onBack ? onBack() : router.back())}
           >
-            <StyledGeneralOption width={24} color={iconColor} height={24} />
+            <Ionicons name="chevron-back" size={24} color={iconColor} />
           </Pressable>
         )}
         <Text className="text-2xl font-bold text-brand-green-900 dark:text-brand-flashwhite">

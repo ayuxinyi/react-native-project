@@ -71,6 +71,7 @@
   "devDependencies": {
     "@react-native-project/auth": "workspace:*",
     "@react-native-project/config": "workspace:*",
+    "@react-native-project/api-types": "workspace:*",
     "@types/node": "^24.10.0",
     "@types/react": "~19.2.10",
     "babel-preset-expo": "~55.0.8",

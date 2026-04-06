@@ -15,6 +15,13 @@
       "when": 1775282024409,
       "tag": "0001_brainy_lilith",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1775392047262,
+      "tag": "0002_lame_kang",
+      "breakpoints": true
     }
   ]
 }

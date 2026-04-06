@@ -79,6 +79,7 @@
         "zod": "catalog:",
       },
       "devDependencies": {
+        "@react-native-project/api-types": "workspace:*",
         "@react-native-project/auth": "workspace:*",
         "@react-native-project/config": "workspace:*",
         "@types/node": "^24.10.0",
@@ -90,9 +91,11 @@
     "apps/server": {
       "name": "server",
       "dependencies": {
+        "@hono/zod-validator": "^0.7.6",
         "@react-native-project/auth": "workspace:*",
         "@react-native-project/db": "workspace:*",
         "@react-native-project/env": "workspace:*",
+        "@react-native-project/schema": "workspace:*",
         "better-auth": "catalog:",
         "dotenv": "catalog:",
         "hono": "^4.8.2",
@@ -103,6 +106,13 @@
         "@types/bun": "catalog:",
         "tsdown": "^0.16.5",
         "typescript": "catalog:",
+      },
+    },
+    "packages/api-types": {
+      "name": "@react-native-project/api-types",
+      "version": "1.0.0",
+      "devDependencies": {
+        "server": "workspace:*",
       },
     },
     "packages/auth": {
@@ -530,6 +540,8 @@
 
     "@gorhom/portal": ["@gorhom/portal@1.0.14", "https://registry.yarnpkg.com/@gorhom/portal/-/portal-1.0.14.tgz", { "dependencies": { "nanoid": "^3.3.1" }, "peerDependencies": { "react": "*", "react-native": "*" } }, "sha512-MXyL4xvCjmgaORr/rtryDNFy3kU4qUbKlwtQqqsygd0xX3mhKjOLn6mQK8wfu0RkoE0pBE0nAasRoHua+/QZ7A=="],
 
+    "@hono/zod-validator": ["@hono/zod-validator@0.7.6", "https://registry.yarnpkg.com/@hono/zod-validator/-/zod-validator-0.7.6.tgz", { "peerDependencies": { "hono": ">=3.9.0", "zod": "^3.25.0 || ^4.0.0" } }, "sha512-Io1B6d011Gj1KknV4rXYz4le5+5EubcWEU/speUjuw9XMMIaP3n78yXLhjd2A3PXaXaUwEAluOiAyLqhBEJgsw=="],
+
     "@hookform/resolvers": ["@hookform/resolvers@5.2.2", "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-5.2.2.tgz", { "dependencies": { "@standard-schema/utils": "^0.3.0" }, "peerDependencies": { "react-hook-form": "^7.55.0" } }, "sha512-A/IxlMLShx3KjV/HeTcTfaMxdwy690+L/ZADoeaTltLx+CVuzkeVIPuybK3jrRfw7YZnmdKsVVHAlEPIAEUNlA=="],
 
     "@humanfs/core": ["@humanfs/core@0.19.1", "https://registry.yarnpkg.com/@humanfs/core/-/core-0.19.1.tgz", {}, "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA=="],
@@ -629,6 +641,8 @@
     "@react-native-community/datetimepicker": ["@react-native-community/datetimepicker@9.1.0", "https://registry.yarnpkg.com/@react-native-community/datetimepicker/-/datetimepicker-9.1.0.tgz", { "dependencies": { "invariant": "^2.2.4" }, "peerDependencies": { "expo": ">=52.0.0", "react": "*", "react-native": "*", "react-native-windows": "*" }, "optionalPeers": ["expo", "react-native-windows"] }, "sha512-eadbnk+I2vxvW30iTAsm/qlCnMMAadkifIMYNEB2lzhxN/SvlKc7S2V4k5DyrwjdCbqdcMk3t9K6fnUMcAV34w=="],
 
     "@react-native-community/netinfo": ["@react-native-community/netinfo@12.0.1", "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-12.0.1.tgz", { "peerDependencies": { "react": "*", "react-native": ">=0.59" } }, "sha512-P/3caXIvfYSJG8AWJVefukg+ZGRPs+M4Lp3pNJtgcTYoJxCjWrKQGNnCkj/Cz//zWa/avGed0i/wzm0T8vV2IQ=="],
+
+    "@react-native-project/api-types": ["@react-native-project/api-types@workspace:packages/api-types"],
 
     "@react-native-project/auth": ["@react-native-project/auth@workspace:packages/auth"],
 
