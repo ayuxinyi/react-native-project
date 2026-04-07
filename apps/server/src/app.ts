@@ -4,6 +4,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { categoryRoutes } from "./routes/category.route";
+import { walletRoutes } from "./routes/wallet.route";
 
 // 创建 Hono 实例，用于处理 HTTP 请求
 const app = new Hono()
@@ -27,6 +28,7 @@ const app = new Hono()
   // 处理 /api/auth/* 路由
   // 当请求方法为 POST 或 GET 时，调用 auth.handler 处理请求
   .on(["POST", "GET"], "/api/auth/*", c => auth.handler(c.req.raw))
+  .route("/api/wallet", walletRoutes)
   .route("/api/category", categoryRoutes);
 
 // 处理服务器错误

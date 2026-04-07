@@ -22,6 +22,20 @@
       "when": 1775392047262,
       "tag": "0002_lame_kang",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1775519074710,
+      "tag": "0003_loose_wolverine",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1775520656005,
+      "tag": "0004_wakeful_black_tarantula",
+      "breakpoints": true
     }
   ]
 }

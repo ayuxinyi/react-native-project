@@ -30,4 +30,14 @@ export const queryKeys = {
     all: ["category"] as const,
     list: (type?: "income" | "expense") => ["category", "list", type] as const,
   },
+  /**
+   * 钱包查询键
+   * @description 用于查询钱包相关的键值对
+   */
+  wallet: {
+    all: ["wallet"] as const,
+    list: () => ["wallet", "list"] as const,
+    detail: (id: string) => ["wallet", "detail", id] as const,
+    default: () => ["wallet", "default"] as const,
+  },
 };
